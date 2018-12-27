@@ -53,7 +53,7 @@ export default class Slider extends Component{
 
     render(){
         window.onload = this.loadImages;
-        // $("#slideImage").fadeIn();
+        
         return(
             <div className="sliderDiv">
                 <img className="slide" id="slideImage" name="slide" height="500" width="1000" alt=""/>                

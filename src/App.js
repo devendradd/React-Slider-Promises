@@ -4,12 +4,14 @@ import './App.css';
 
 import Slider from './components/slideshow';
 
+import Routes from './routes';
+
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <Slider />
+          <Routes/>
         </header>
       </div>
     );
