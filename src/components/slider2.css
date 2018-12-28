@@ -10,3 +10,8 @@
   margin-top: 5.5em;
   position: fixed;
 }
+
+.containerCarousel{
+  width: 700;
+  height: 500;
+}
