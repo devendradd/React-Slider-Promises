@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 // import {Icon} from 'react-ionicons';
+import IosArrowDropleft from 'react-ionicons/lib/IosArrowDropleft';
+import IosArrowDropright from 'react-ionicons/lib/IosArrowDropright';
 import './slider2.css';
 
-class App extends Component {
+export default class Slider2 extends Component {
 
   constructor(){
     super();
@@ -62,15 +64,12 @@ class App extends Component {
     return (
       <div>
           <h1> this is slider 2</h1>
-          <div>  
+          <div>
             <div className="leftBtn">
-              <button value="left" text="left" onClick={this.previousImage}> 
-                previousImage 
-              </button>
-              
+              <IosArrowDropleft  onClick={this.previousImage} fontSize="60px" color="#43853d" />
             </div>
             <div className="rightBtn">
-              <button value="right" text="right" onClick={this.nextImage}> nextImage </button> <br />
+              <IosArrowDropright  onClick={this.nextImage} fontSize="60px" color="#43853d" />
             </div>
           </div>
           <img className="slide" id="slideImage" name="slide" height="500" width="1000" alt="" src={this.state.currentImage}/>
@@ -79,4 +78,4 @@ class App extends Component {
   }
 }
 
-export default App;
+// export default App;
