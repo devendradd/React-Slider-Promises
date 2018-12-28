@@ -5,3 +5,8 @@
 .rightBtn{
     float: right;
 }
+
+.arrowVerticalCenter{
+  margin-top: 5.5em;
+  position: fixed;
+}
