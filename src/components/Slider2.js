@@ -7,9 +7,10 @@ import './slider2.css';
 
 export default class Slider2 extends Component {
 
-  constructor(){
-    super();
-
+  constructor(props){
+    super(props);
+    // console.log("hereSS");
+    // console.log(this.props.isSlide);
     this.state = {
       images: [
         "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/aurora.jpg",
