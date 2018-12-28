@@ -32,7 +32,7 @@ class App extends Component {
 
                     <NavItem className="d-flex align-items-center">
                       <NavLink className="font-weight-bold" href="/">
-                        <img src={'https://gif-avatars.com/img/150x150/donald-duck-x.gif'} alt="avatar" className="img-fluid rounded-circle" style={{ width: 36 }} />
+                        <img src={'https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/male/45.png'} alt="avatar" className="img-fluid rounded-circle" style={{ width: 36 }} />
                       </NavLink>
                     </NavItem>
 
