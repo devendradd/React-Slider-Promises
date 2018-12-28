@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
 import Slider1 from '../src/components/slideshow';
-import Slider2 from '../src/components/slider2';
+import Slider2 from '../src/components/Slider2';
 import Slider3 from '../src/components/slider3'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './logo.svg';
