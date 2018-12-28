@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter, Route, Switch, Link} from 'react-router-dom';
-
 import Slider1 from '../src/components/slideshow';
 import Slider2 from '../src/components/Slider2';
 
@@ -10,12 +9,11 @@ class App extends Component {
     return (
       <div>
         <div className="App">
-        <div>
-          
+        <div>          
              <a href="/" > Slider 1 </a> or 
-             <a href="/slider2" > Slider 2 </a>
-          
-        </div>       
+             <a href="/slider2" > Slider 2 </a>          
+        </div>
+               
           <header className="App-header">
             {/* <Routes/> */}
             <BrowserRouter> 
@@ -23,10 +21,8 @@ class App extends Component {
                     <Switch>
                         <Route path="/" exact component={Slider1}/>
                         <Route path="/slider2" exact component={Slider2} />
-                    </Switch>
-                      
-                </div>
-                
+                    </Switch>                      
+                </div>                
             </BrowserRouter>
           </header>
         </div>
