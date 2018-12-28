@@ -22,43 +22,42 @@ class App extends Component {
 
         <div className="App">
 
+        <Navbar fixed="top" color="light" light expand="xs" className="border-bottom border-gray bg-white " style={{ height: 80 }}>
+
+            <Container>
+              <Row className="position-relative w-100 align-items-center">
+
+                <Col className="d-none d-lg-flex justify-content-start">
+                  <Nav className="mrx-auto" navbarInverse>
+
+                    <NavItem className="d-flex align-items-center">
+                      <NavLink className="font-weight-bold" href="/">
+                        <img src={'https://gif-avatars.com/img/150x150/donald-duck-x.gif'} alt="avatar" className="img-fluid rounded-circle" style={{ width: 36 }} />
+                      </NavLink>
+                    </NavItem>
+
+                    <NavItem className="d-flex align-items-center">
+                      <NavLink className="font-weight-bold" href="/">Auto Slide</NavLink>
+                    </NavItem>
+
+                    <NavItem className="d-flex align-items-center">
+                      <NavLink className="font-weight-bold" href="/slider2">Manual Slide</NavLink>
+                    </NavItem>
+
+                    <NavItem className="d-flex align-items-center">
+                      <NavLink className="font-weight-bold" href="/slider3">Third Party Slider</NavLink>
+                    </NavItem>
+
+
+                  </Nav>
+                </Col>
+              </Row>
+            </Container>
+
+          </Navbar>
+
 
             <header className="App-header">
-              <Navbar fixed="top" color="light" light expand="xs" className="border-bottom border-gray bg-white " style={{ height: 80 }}>
-
-                  <Container>
-                    <Row className="position-relative w-100 align-items-center">
-
-                      <Col className="d-none d-lg-flex justify-content-start">
-                        <Nav className="mrx-auto" navbarInverse>
-
-                          <NavItem className="d-flex align-items-center">
-                            <NavLink className="font-weight-bold" href="/">
-                              <img src={'https://gif-avatars.com/img/150x150/donald-duck-x.gif'} alt="avatar" className="img-fluid rounded-circle" style={{ width: 36 }} />
-                            </NavLink>
-                          </NavItem>
-
-                          <NavItem className="d-flex align-items-center">
-                            <NavLink className="font-weight-bold" href="/">Auto Slide</NavLink>
-                          </NavItem>
-
-                          <NavItem className="d-flex align-items-center">
-                            <NavLink className="font-weight-bold" href="/slider2">Manual Slide</NavLink>
-                          </NavItem>
-
-                          <NavItem className="d-flex align-items-center">
-                            <NavLink className="font-weight-bold" href="/slider3">Third Party Slider</NavLink>
-                          </NavItem>
-
-
-                        </Nav>
-                      </Col>
-                    </Row>
-                  </Container>
-
-                </Navbar>
-
-
                 <BrowserRouter>
                     <div>
                         <Switch>
