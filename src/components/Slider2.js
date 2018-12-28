@@ -62,18 +62,14 @@ export default class Slider2 extends Component {
 
   render() {
     return (
-      <div>
-          <h1> this is slider 2</h1>
-          <div>
-            <div className="leftBtn">
-              <IosArrowDropleft  onClick={this.previousImage} fontSize="60px" color="#43853d" />
-            </div>
-            <div className="rightBtn">
-              <IosArrowDropright  onClick={this.nextImage} fontSize="60px" color="#43853d" />
-            </div>
-          </div>
-          <img className="slide" id="slideImage" name="slide" height="500" width="1000" alt="" src={this.state.currentImage}/>
-      </div>
+
+      <Container>
+        <Row>
+          <Col className="arrowVerticalCenter"><IosArrowDropleft  onClick={this.previousImage} fontSize="60px" color="#43853d" /></Col>
+          <Col><img className="slide" id="slideImage" name="slide" height="400" width="700" alt="" src={this.state.currentImage}/></Col>
+          <Col className="arrowVerticalCenter"><IosArrowDropright  onClick={this.nextImage} fontSize="60px" color="#43853d" /></Col>
+        </Row>
+      </Container>
     );
   }
 }
