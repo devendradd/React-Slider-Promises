@@ -65,12 +65,10 @@ class App extends Component {
                     <div>
                         <Switch>
                             <Route path="/" exact component={ ()=>
-                                  <Slider1 isSlide={true} 
-                                           setTimeOutTime={3000} 
-                                           fadeInTime={1500} 
-                                           fadeOutTime={1500}/>}
+                                  <Slider1 />
+                                }
                             />
-                            <Route path="/slider2" exact component={ Slider2}/>
+                            <Route path="/slider2" exact component={Slider2}/>
                             <Route path="/slider3" exact component={Slider3} />
                         </Switch>
                     </div>

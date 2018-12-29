@@ -3,7 +3,7 @@ import $ from 'jquery';
 
 export default class Slider extends Component{
     constructor(props){
-        super(props);                
+        super(props);       
     }    
 
     async loadImages(){
