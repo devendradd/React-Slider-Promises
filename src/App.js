@@ -12,6 +12,11 @@ import {
 
 
 class App extends Component {
+
+  constructor(props){
+    super(props);
+  }
+
   render() {
     return (
       <div>
@@ -59,7 +64,12 @@ class App extends Component {
                 <BrowserRouter>
                     <div>
                         <Switch>
-                            <Route path="/" exact component={ ()=><Slider1 isSlide={true}/>}/>
+                            <Route path="/" exact component={ ()=>
+                                  <Slider1 isSlide={true} 
+                                           setTimeOutTime={3000} 
+                                           fadeInTime={1500} 
+                                           fadeOutTime={1500}/>}
+                            />
                             <Route path="/slider2" exact component={ Slider2}/>
                             <Route path="/slider3" exact component={Slider3} />
                         </Switch>

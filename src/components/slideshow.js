@@ -3,9 +3,8 @@ import $ from 'jquery';
 
 export default class Slider extends Component{
     constructor(props){
-        super(props);
-        console.log("isSLide : ",this.props.isSlide);
-    }
+        super(props);                
+    }    
 
     async loadImages(){
 
@@ -21,33 +20,39 @@ export default class Slider extends Component{
         images[6]="https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/sandy-shores.jpg";
         images[7]="https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/tree-of-life.jpg";
 
-            document.slide.src = images[0]; // show first image by default
-            
-                for(var n = 1 ; n <= images.length; n++){
 
-                    //used promise because we want setTimout() to wait till it gets executed before it goes to second one
-                    let promise = new Promise((resolve, reject) => {
-                        setTimeout(() => {
-                            resolve(document.slide.src = images[n]); //directly attach the image to src property of image tag,
-                            // we have discovered the image tag src value using document.slide object
-                        }, 3000);
-                    });
+        var setTimeoutTime = 3000;
+        var fadeInTIme = 1500;
+        var fadeOutTime = 1500;
 
-                    $('.slide').fadeIn(1500);// fade in for half of the time i.e. 2500 miliseconds
-                    $('.slide').fadeOut(1500);// fade out for half of the time i.e. 2500 miliseconds
+        document.slide.src = images[0]; // show first image by default
+        
+            for(var n = 1 ; n <= images.length; n++){
 
-                    let result = await promise; // wait till the promise gets really resolves
+                //used promise because we want setTimout() to wait till it gets executed before it goes to second one
+                let promise = new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        //directly attach the image to src property of image tag,
+                        // we have discovered the image tag src value using document.slide object
+                        resolve(document.slide.src = images[n]);                     
+                    }, setTimeoutTime);
+                });
 
-                    console.log("result is : ", result);
+                $('.slide').fadeIn(fadeInTIme);// fade in for half of the time i.e. 2500 miliseconds
+                $('.slide').fadeOut(fadeOutTime);// fade out for half of the time i.e. 2500 miliseconds
 
-                        if(n == images.length-1){ //check if the value of n in for loop has become 7 i.e. images.length-1
-                            console.log("here");
-                            n =  -1; //assigned -1 because when last element gets executed the value of n becomes 1 instead of 0.
-                                    // we want to start it with 0 because the slider should re-initialize to 0 to start all over again with first image.
-                            console.log("value of n is : ", n);
-                        }
+                let result = await promise; // wait till the promise gets really resolved
 
-                }
+                console.log("result is : ", result);
+
+                    if(n == images.length-1){ //check if the value of n in for loop has become 7 i.e. images.length-1
+                        console.log("here");
+                        n =  -1; //assigned -1 because when last element gets executed the value of n becomes 1 instead of 0.
+                                // we want to start it with 0 because the slider should re-initialize to 0 to start all over again with first image.
+                        console.log("value of n is : ", n);
+                    }
+
+            }
             
     }
 
